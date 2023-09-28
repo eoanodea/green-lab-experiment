@@ -21,6 +21,7 @@ import os
 import time
 
 os.system("adb shell pm clear com.android.chrome")
+os.system("adb shell 'echo \"chrome --disable-fre --no-default-browser-check --no-first-run\" > /data/local/tmp/chrome-command-line'")
 
 appium_server_url = 'http://localhost:4723'
 capabilities = dict(
@@ -53,7 +54,7 @@ time.sleep(5)
 
 
 
-driver.execute_script('document.title')
+# driver.execute_script('document.title')
 
 # javascript_code = """
 #     // Your JavaScript code here
