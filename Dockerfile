@@ -8,4 +8,4 @@ COPY proxy.py /proxy.py
 EXPOSE 8080
 
 # Run mitmdump with your custom script
-CMD ["mitmdump", "-s", "/proxy.py"]
+CMD ["mitmdump","--set","block_global=false", "-s", "/proxy.py"]
