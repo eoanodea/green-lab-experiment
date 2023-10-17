@@ -21,94 +21,60 @@ import os
 import time
 
 os.system("adb shell pm clear com.android.chrome")
-os.system("adb shell 'echo \"chrome --disable-fre --no-default-browser-check --no-first-run\" > /data/local/tmp/chrome-command-line'")
+# os.system("adb shell 'echo \"chrome --disable-fre --no-default-browser-check --no-first-run --disable-web-security --ignore-certificate-errors --ignore-urlfetcher-cert-requests\" > /data/local/tmp/chrome-command-line'")
+os.system("adb shell am start com.android.chrome --enabl-logging --disable-web-security --ignore-certificate-errors  --allow-insecure-localhost --ignore-urlfetcher-cert-requests")
+# os.system("adb shell am start -a android.intent.action.VIEW -d https://www.vu.nl")
 
-appium_server_url = 'http://localhost:4723'
-capabilities = dict(
-    platformName='Android',
-    automationName='uiautomator2',
-    deviceName='Pixel 6',
-    appPackage='com.android.chrome',
-    appActivity='com.google.android.apps.chrome.Main',
-    language='en',
-    locale='US',
-    chromedriverExecutableDir='/usr/local/lib/node_modules/appium/node_modules/appium-chromedriver/chromedriver/mac',
-    chromedriverUseSystemExecutable=True,
-)   
+# adb shell 'echo --unsafely-treat-insecure-origin-as-secure=http://a.test > /data/local/tmp/chrome-command-line'
+
+# appium_server_url = 'http://localhost:4723'
+# capabilities = dict(
+#     platformName='Android',
+#     automationName='uiautomator2',
+#     deviceName='Pixel 6',
+#     appPackage='com.android.chrome',
+#     appActivity='com.google.android.apps.chrome.Main',
+#     language='en',
+#     locale='US',
+#     chromedriverExecutableDir='/usr/local/lib/node_modules/appium/node_modules/appium-chromedriver/chromedriver/mac',
+#     chromedriverUseSystemExecutable=True,
+#     # "appium:options": {
+#     #     w3c: False,  # Required to use Appium with ChromeDriver
+#     #     args: [
+#     #         '--disable-fre',
+#     #         '--no-default-browser-check',
+#     #         '--no-first-run',a
+#     #         '--disable-web-security',
+#     #         '--ignore-certificate-errors',
+#     #         '--ignore-urlfetcher-cert-requests',
+#     #         # Add any additional Chrome options here
+#     #     ]
+#     # }
+# )   
+
+# # adb shell am start \
+# #   -a android.intent.action.VIEW \
+# #   -n org.chrome.content_shell_apk/.ContentShellActivity \
+# #   --es activeUrl "http://chromium.org" \
+# #   --esa commandLineArgs --show-paint-rects,--show-property-changed-rects
 
 
-# /Users/eoan/Sites/vu/green-lab/test-extension.crx
-capabilities_options = UiAutomator2Options().load_capabilities(capabilities)
+# # # /Users/eoan/Sites/vu/green-lab/test-extension.crx
+# capabilities_options = UiAutomator2Options().load_capabilities(capabilities)
 
 
-driver = webdriver.Remote(appium_server_url, options=capabilities_options)
-driver.implicitly_wait(5000)
+# driver = webdriver.Remote(appium_server_url, options=capabilities_options)
+# driver.implicitly_wait(5000)
+
+# url = 'https://vu.nl'
+# driver.get(url)
 
 
-driver.find_element(by=AppiumBy.XPATH, value='//*[@text="Accept & continue"]').click()
-
-driver.find_element(by=AppiumBy.XPATH, value='//*[@text="No thanks"]').click()
-
-driver.find_element(by=AppiumBy.XPATH, value='//*[@text="No thanks"]').click()
-time.sleep(5)
+# driver.find_element(by=AppiumBy.XPATH, value='//*[@text="Use without an account"]').click()
+# driver.find_element(by=AppiumBy.XPATH, value='//*[@text="No thanks"]').click()
 
 
-
-# driver.execute_script('document.title')
-
-# javascript_code = """
-#     // Your JavaScript code here
-#     document.body.style.backgroundColor = 'red';
-#     //var element = document.getElementById('elementId'); // Replace with the actual element you want to interact with
-#     //element.click(); // Example interaction with the element
-# """
-
-# Execute the JavaScript code in the context of the web page
-# driver.execute_script(javascript_code)
 
 
 # Close the driver when done
-driver.quit()
-# PATH_TO_CSV = "urls.csv"
-# BUTTON1_X = 556.5
-# BUTTON1_Y = 2216.9
-
-# BUTTON2_X = 129.1
-# BUTTON2_Y = 2256.9
-
-# BUTTON3_X = 597.5
-# BUTTON3_Y = 1785.7
-
-# import os
-# import time
-
-# def process(url):
-
-#     adbCommand1 = f"adb shell am start -a android.intent.action.VIEW -d {url}"
-    
-#     #command to clear the Chrome application data
-    # adbCommand2 = "adb shell pm clear com.android.chrome"
-
-#     os.system(adbCommand1)
-#     time.sleep(1.5)
-    
-#     #disable the Chrome welcome screen
-#     os.system("adb shell input tap %d %d" % (BUTTON1_X, BUTTON1_Y))
-#     time.sleep(0.5)
-#     time.sleep(0.5)
-#     os.system("adb shell input tap %d %d" % (BUTTON2_X, BUTTON2_Y))
-#     time.sleep(0.5)
-#     os.system("adb shell input tap %d %d" % (BUTTON3_X, BUTTON3_Y))
-
-#     #wait for the page to load
-#     time.sleep(8)
-
-#     os.system(adbCommand2)
-
-# os.system("adb shell pm clear com.android.chrome")
-
-# #loading the urls from csv line by line
-# with open(PATH_TO_CSV, "r") as file:
-#     for line in file:
-#         url = line.strip()
-#         process(url)
+# driver.quit()

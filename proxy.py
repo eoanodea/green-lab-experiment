@@ -1,33 +1,48 @@
 from mitmproxy import http
 
+# Definisci il tuo codice JavaScript da iniettare
+script_code = """
+<script type="module">
+  import {onCLS, onFID, onLCP} from 'https://unpkg.com/web-vitals@3?module';
+
+    function sendAPIRequest(metricName, value) {
+            fetch('https://closing-bobcat-honestly.ngrok-free.app/api/data', {
+            method: 'POST', // or 'GET' depending on your API endpoint
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ metric: metricName, value: value, host: window.location.host }),
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('API response:', data);
+            })
+            .catch((error) => {
+                console.error('Error sending API request:', error);
+            });
+        }
+
+        onCLS(function (metric) {
+            console.log('CLS:', metric);
+            sendAPIRequest('CLS', metric.value);
+        });
+
+        onFID(function (metric) {
+            console.log('FID:', metric);
+            sendAPIRequest('FID', metric.value);
+        });
+
+        onLCP(function (metric) {
+            console.log('LCP:', metric);
+            sendAPIRequest('LCP', metric.value);
+        });
+</script>
+"""
+
 def response(flow: http.HTTPFlow):
-    # Define the JavaScript code you want to inject
-    injected_js = '<script>alert("Injected JS")</script>'
-    injected_js = """
-    <script>
-    (function () {
-        var script = document.createElement('script');
-        script.src =
-        'https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.iife.js';
-        script.onload = function () {
-        // When loading `web-vitals` using a classic script, all the public
-        // methods can be found on the `webVitals` global namespace.
-            webVitals.onCLS(console.log);
-            webVitals.onFID(console.log);
-            webVitals.onLCP(console.log);
-        };
-        document.head.appendChild(script);
-    })();
-    </script>
-    """
-
-    # Check if the response is HTML
-    if "text/html" in flow.response.headers.get("content-type", ""):
-        # Inject the JavaScript code into the response content
-        flow.response.content = flow.response.content.replace(b"</body>", injected_js.encode() + b"</body>")
-
-# Run mitmproxy with your custom script
-if __name__ == "__main__":
-    from mitmproxy.tools import main
-
-    main()
+    # Inserisci il tuo script nel corpo della risposta
+    if flow.response.headers["content-type"] and "text/html" in flow.response.headers["content-type"]:
+        flow.response.content = flow.response.content.replace(
+            b"</body>",
+            script_code.encode() + b"</body>",
+        )
