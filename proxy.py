@@ -1,5 +1,4 @@
 from mitmproxy import http
-# get server url from .env file
 import os
 from dotenv import load_dotenv
 load_dotenv()
