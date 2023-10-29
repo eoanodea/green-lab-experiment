@@ -1,48 +1,71 @@
 from mitmproxy import http
+# get server url from .env file
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-# Definisci il tuo codice JavaScript da iniettare
-script_code = """
+server_url = os.getenv("SERVER_URL")
+
+script_code = f"""
 <script type="module">
-  import {onCLS, onFID, onLCP} from 'https://unpkg.com/web-vitals@3?module';
+  window.onload = (event) => {{
+      const message = "carico";  
+      const data = {{ message }};
+      fetch('{server_url}/api/console-log', {{
+          method: 'POST',
+          headers: {{
+              'Content-Type': 'application/json',
+          }},
+          body: JSON.stringify(data),
+      }})
+          .then((response) => {{
+              if (response.ok) {{
+                  console.log("success");
+              }} else {{
+                  console.error("error");
+              }}
+          }})
+          .catch((error) => {{
+              console.error("error HTTP:", error);
+          }});
+   }}
+      import {{ onCLS, onFID, onLCP }} from 'https://unpkg.com/web-vitals@3?module';
 
-    function sendAPIRequest(metricName, value) {
-            fetch('https://closing-bobcat-honestly.ngrok-free.app/api/data', {
-            method: 'POST', // or 'GET' depending on your API endpoint
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ metric: metricName, value: value, host: window.location.host }),
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log('API response:', data);
-            })
-            .catch((error) => {
-                console.error('Error sending API request:', error);
-            });
-        }
+      function sendAPIRequest(metricName, value) {{
+          fetch('{server_url}/api/data', {{
+              method: 'POST',
+              headers: {{
+                  'Content-Type': 'application/json',
+              }},
+              body: JSON.stringify({{ metric: metricName, value: value, host: window.location.host }}),
+          }})
+              .then((response) => response.json())
+              .then((data) => {{
+                  console.log('API response:', data);
+              }})
+              .catch((error) => {{
+                  console.error('Error sending API request:', error);
+              }});
+      }}
 
-        onCLS(function (metric) {
-            console.log('CLS:', metric);
-            sendAPIRequest('CLS', metric.value);
-        });
+      onCLS(function (metric) {{
+          sendAPIRequest('CLS', metric.value);
+      }});
 
-        onFID(function (metric) {
-            console.log('FID:', metric);
-            sendAPIRequest('FID', metric.value);
-        });
+      onFID(function (metric) {{
+          sendAPIRequest('FID', metric.value);
+      }});
 
-        onLCP(function (metric) {
-            console.log('LCP:', metric);
-            sendAPIRequest('LCP', metric.value);
-        });
+      onLCP(function (metric) {{
+          sendAPIRequest('LCP', metric.value);
+      }});
 </script>
 """
 
 def response(flow: http.HTTPFlow):
-    # Inserisci il tuo script nel corpo della risposta
-    if flow.response.headers["content-type"] and "text/html" in flow.response.headers["content-type"]:
-        flow.response.content = flow.response.content.replace(
-            b"</body>",
-            script_code.encode() + b"</body>",
-        )
+  # Inserisci il tuo script nel corpo della risposta
+  if flow.response.headers["content-type"] and "text/html" in flow.response.headers["content-type"]:
+     flow.response.content = flow.response.content.replace(
+        b"</body>",
+        script_code.encode() + b"</body>",
+)

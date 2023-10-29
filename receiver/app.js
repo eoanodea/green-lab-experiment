@@ -60,6 +60,36 @@ app.post("/api/data", (req, res) => {
   }
 });
 
+let lastReceivedMessage = null;
+
+app.get("/api/last-received-message", (req, res) => {
+  res.json(lastReceivedMessage);
+});
+
+app.post("/api/console-log", (req, res) => {
+  const message = req.body.message;
+
+  if (message) {
+    // Aggiorna l'ultimo messaggio
+    lastReceivedMessage = { message, timestamp: new Date() };
+
+    // Stampa il messaggio nella console del server Node.js
+    console.log("Messaggio da console.log:", message);
+    res.json({ message: "Messaggio ricevuto" });
+  } else {
+    // Se non è stato fornito un messaggio valido, invia una risposta di errore
+    res.status(400).json({ error: "Messaggio non valido" });
+  }
+});
+
+app.post("/api/mark-message-as-read", (req, res) => {
+  // Resetta l'ultimo messaggio
+  lastReceivedMessage = null;
+  res.json({ message: "Messaggio segnato come letto" });
+});
+
+
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
