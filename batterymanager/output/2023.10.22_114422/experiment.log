@@ -1,0 +1,5 @@
+2023-10-22 11:44:22,056:INFO:ExperimentFactory:/home/pi/android-runner/examples/batterymanager/p.json
+2023-10-22 11:44:25,279:DEBUG:AndroidRunner.Adb:Device list:
+{0: '18131FDF6002S9'}
+2023-10-22 11:44:25,280:ERROR:root:ConnectionError: 192.168.0.142:5555: Device not recognized
+2023-10-22 11:44:25,281:ERROR:root:An error occurred, the experiment has been stopped. To continue, add progress file argument to experiment startup: --progress  No progress file created

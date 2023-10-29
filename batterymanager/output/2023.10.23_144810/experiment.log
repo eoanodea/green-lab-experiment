@@ -1,0 +1,703 @@
+2023-10-23 14:48:10,608:INFO:ExperimentFactory:/home/pi/android-runner/examples/batterymanager/p.json
+2023-10-23 14:48:10,672:DEBUG:AndroidRunner.Adb:Device list:
+{0: '18131FDF6002S9', 1: '192.168.0.142:5555'}
+2023-10-23 14:48:10,673:INFO:Device:Setting logcat buffer size to 57344K
+2023-10-23 14:48:10,836:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "logcat -G 57344K" returned: 
+
+2023-10-23 14:48:13,908:DEBUG:PluginHandler:batterymanager: Initialized
+2023-10-23 14:48:13,913:DEBUG:Python3:Imported /home/pi/android-runner/examples/batterymanager/Scripts/before_experiment.py
+2023-10-23 14:48:13,916:DEBUG:Python3:Imported /home/pi/android-runner/examples/batterymanager/Scripts/before_run.py
+2023-10-23 14:48:13,918:DEBUG:Python3:Imported /home/pi/android-runner/examples/batterymanager/Scripts/after_launch.py
+2023-10-23 14:48:14,426:DEBUG:Python3:Imported /home/pi/android-runner/examples/batterymanager/Scripts/interaction3.py
+2023-10-23 14:48:14,432:DEBUG:Python3:Imported /home/pi/android-runner/examples/batterymanager/Scripts/before_close.py
+2023-10-23 14:48:14,436:DEBUG:Python3:Imported /home/pi/android-runner/examples/batterymanager/Scripts/after_run.py
+2023-10-23 14:48:14,438:DEBUG:Python3:Imported /home/pi/android-runner/examples/batterymanager/Scripts/after_experiment.py
+2023-10-23 14:48:14,648:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "pm list packages" returned: 
+package:com.google.audio.hearing.visualization.accessibility.scribe
+package:com.android.systemui.auto_generated_rro_vendor__
+package:com.google.android.providers.media.module
+package:com.google.android.overlay.permissioncontroller
+package:com.google.android.overlay.googlewebview
+package:com.android.calllogbackup
+package:com.android.omadm.service
+package:io.appium.uiautomator2.server
+package:com.android.providers.contacts
+package:com.google.android.pixel.setupwizard.auto_generated_rro_product__
+package:com.google.android.apps.nbu.files
+package:com.android.dreams.basic
+package:com.android.companiondevicemanager
+package:com.android.cts.priv.ctsshim
+package:com.google.android.calendar
+package:com.google.android.contacts
+package:com.android.mms.service
+package:com.google.android.cellbroadcastreceiver
+package:com.android.providers.downloads
+package:com.android.bluetoothmidiservice
+package:com.google.android.apps.wallpaper.pixel
+package:com.android.networkstack.overlay
+package:com.google.android.euiccoverlay
+package:io.appium.settings
+package:com.google.android.printservice.recommendation
+package:com.google.android.captiveportallogin
+package:com.google.android.networkstack
+package:com.android.captiveportallogin.overlay
+package:com.google.android.overlay.googleconfig
+package:com.android.keychain
+package:com.google.android.hardwareinfo
+package:com.google.android.tag
+package:android.auto_generated_rro_vendor__
+package:com.google.android.dreamlinerupdater
+package:com.google.android.apps.wellbeing
+package:com.android.nfc.auto_generated_rro_product__
+package:com.android.shell
+package:com.google.android.ims
+package:com.google.android.adservices.api
+package:com.google.android.wifi.dialog
+package:com.android.inputdevices
+package:com.google.android.networkstack.tethering.overlay2021
+package:com.google.android.ondevicepersonalization.services
+package:com.google.euiccpixel
+package:com.google.android.apps.customization.pixel
+package:com.android.bookmarkprovider
+package:com.google.android.apps.tips
+package:com.google.android.onetimeinitializer
+package:com.google.android.permissioncontroller
+package:me.twocities.throttly
+package:com.android.sharedstoragebackup
+package:com.google.android.apps.cbrsnetworkmonitor
+package:com.android.imsserviceentitlement
+package:com.android.providers.media
+package:com.android.providers.calendar
+package:com.android.providers.blockednumber
+package:com.google.android.documentsui
+package:com.google.android.apps.internal.betterbug
+package:com.android.proxyhandler
+package:com.android.managedprovisioning
+package:com.android.emergency
+package:com.google.android.gms.location.history
+package:com.android.omadm.service.auto_generated_rro_vendor__
+package:com.google.android.storagemanager.auto_generated_rro_vendor__
+package:com.google.android.gm
+package:com.android.carrierdefaultapp
+package:com.android.backupconfirm
+package:com.google.android.flipendo
+package:com.google.android.hotspot2.osulogin
+package:com.android.nfc
+package:com.google.android.deskclock
+package:com.android.mtp
+package:com.google.android.gsf
+package:com.google.android.apps.accessibility.voiceaccess
+package:com.google.android.overlay.pixelconfigcommon
+package:com.google.android.carrierlocation
+package:com.google.euiccpixel.overlay.gs101
+package:com.google.android.apps.security.securityhub
+package:com.google.pixel.livewallpaper
+package:com.android.internal.display.cutout.emulation.double
+package:com.android.theme.font.notoserifsource
+package:com.google.android.wallpaper.effects
+package:com.android.traceur.auto_generated_rro_product__
+package:com.android.cellbroadcastreceiver.overlay.pixel
+package:com.google.SSRestartDetector
+package:com.example.batterymanager_utility
+package:com.google.android.settings.intelligence
+package:android.autoinstalls.config.google.nexus
+package:com.android.managedprovisioning.overlay
+package:com.android.systemui
+package:com.google.ar.core
+package:com.vzw.apnlib
+package:com.android.providers.contacts.auto_generated_rro_product__
+package:com.google.android.dialer
+package:com.google.android.flipendo.auto_generated_rro_vendor__
+package:com.samsung.slsi.telephony.oem.oemrilhookservice
+package:com.google.android.grilservice
+package:com.verizon.mips.services
+package:com.android.internal.systemui.navbar.gestural
+package:com.google.android.apps.nexuslauncher
+package:com.google.android.overlay.pixelconfig2021
+package:com.shannon.imsservice
+package:com.google.mainline.adservices
+package:com.google.android.calculator
+package:com.google.android.apps.healthdata
+package:com.android.internal.display.cutout.emulation.avoidAppsInCutout
+package:com.android.hotwordenrollment.okgoogle
+package:com.android.hbmsvmanager
+package:com.google.android.factoryota
+package:com.google.android.apps.wallpaper
+package:com.google.android.federatedcompute
+package:com.google.android.webview
+package:com.google.android.sdksandbox
+package:com.google.android.storagemanager
+package:com.android.wallpaperbackup
+package:com.google.android.cellbroadcastservice
+package:com.android.sdm.plugins.diagmon
+package:com.verizon.services
+package:com.android.internal.systemui.navbar.threebutton
+package:com.android.egg
+package:com.android.localtransport
+package:android
+package:com.google.android.overlay.pixelconfig2019
+package:com.google.android.overlay.pixelconfig2018
+package:com.google.android.virtualmachine.res
+package:com.google.android.pixelnfc
+package:com.quicinc.trepn
+package:com.android.providers.settings.auto_generated_rro_product__
+package:com.android.hotwordenrollment.xgoogle
+package:com.google.android.soundpicker
+package:com.android.settings.auto_generated_rro_vendor__
+package:com.android.internal.display.cutout.emulation.noCutout
+package:com.google.android.packageinstaller
+package:com.android.se
+package:com.android.pacprocessor
+package:com.android.settings.overlay.pixel2021
+package:com.android.providers.media.overlay.pixel
+package:com.google.android.tetheringentitlement
+package:com.google.android.safetycenter.resources
+package:com.google.android.apps.youtube.music
+package:com.android.stk
+package:com.android.internal.display.cutout.emulation.hole
+package:com.android.settings
+package:com.android.bips
+package:com.shannon.qualifiednetworksservice
+package:com.google.android.partnersetup
+package:com.android.internal.systemui.navbar.gestural_narrow_back
+package:com.android.internal.display.cutout.emulation.tall
+package:com.google.android.networkstack.tethering
+package:com.google.android.apps.gcs
+package:com.android.sdm.plugins.connmo
+package:com.google.android.projection.gearhead
+package:com.android.cameraextensions
+package:com.android.safetyregulatoryinfo
+package:com.google.android.odad
+package:com.android.internal.systemui.navbar.gestural_wide_back
+package:com.google.android.apps.carrier.carrierwifi
+package:com.android.traceur.auto_generated_rro_vendor__
+package:com.shannon.rcsservice
+package:com.google.android.videos
+package:com.google.android.ext.shared
+package:com.google.android.feedback
+package:com.google.android.apps.scone.overlays
+package:com.android.remoteprovisioner
+package:com.android.chrome
+package:com.google.android.apps.maps
+package:com.google.android.apps.camera.services
+package:com.google.android.wifi.resources.pixel
+package:com.google.android.as
+package:android.auto_generated_rro_product__
+package:com.android.musicfx
+package:com.android.server.telecom.auto_generated_rro_product__
+package:com.google.android.inputmethod.latin
+package:com.google.android.accessibility.soundamplifier
+package:com.google.android.apps.carrier.log
+package:com.google.android.overlay.udfpsoverlay
+package:com.google.android.marvin.talkback
+package:com.android.settings.overlay.gb7n6
+package:com.google.android.systemui.gxoverlay
+package:com.google.android.uwb.resources
+package:com.android.providers.downloads.ui
+package:com.google.android.wifi.resources
+package:com.android.ons
+package:com.google.android.GoogleCamera
+package:com.android.intentresolver
+package:com.google.android.apps.docs
+package:com.google.android.nearby.halfsheet
+package:com.android.phone.auto_generated_rro_vendor__
+package:com.android.certinstaller
+package:com.google.android.setupwizard
+package:com.google.android.apps.safetyhub
+package:com.google.android.apps.recorder
+package:com.google.android.apps.restore
+package:com.google.android.systemui.overlay.pixelbatteryhealthconfig
+package:com.android.simappdialog
+package:com.android.providers.telephony
+package:com.android.wallpaper.livepicker
+package:com.android.ons.auto_generated_rro_vendor__
+package:com.google.android.carriersetup
+package:com.google.android.uvexposurereporter
+package:io.appium.uiautomator2.server.test
+package:com.google.android.connectivity.resources.overlay
+package:com.android.internal.display.cutout.emulation.waterfall
+package:com.android.settings.auto_generated_rro_product__
+package:com.android.providers.settings
+package:com.google.android.pixel.setupwizard
+package:com.android.phone
+package:com.android.internal.systemui.navbar.gestural_extra_wide_back
+package:com.google.android.overlay.pixelconfig2019midyear
+package:com.google.android.flipendo.auto_generated_rro_product__
+package:com.google.android.apps.work.oobconfig
+package:com.android.traceur
+package:com.google.android.pixel.setupwizard.overlay2019
+package:com.google.android.as.oss
+package:com.google.android.apps.messaging
+package:com.google.android.apps.diagnosticstool
+package:com.google.android.apps.wearables.maestro.companion
+package:com.android.location.fused
+package:com.google.android.pixel.setupwizard.overlay
+package:com.android.vpndialogs
+package:com.samsung.slsi.telephony.oemril
+package:com.android.cellbroadcastreceiver
+package:com.android.systemui.plugin.globalactions.wallet
+package:com.google.android.tts
+package:com.google.android.googlequicksearchbox
+package:com.android.settings.overlay.oriole
+package:com.google.android.turboadapter
+package:com.google.android.modulemetadata
+package:com.google.RilConfigService
+package:com.android.phone.auto_generated_rro_product__
+package:com.google.android.documentsui.theme.pixel
+package:com.google.android.apps.work.clouddpc
+package:com.android.htmlviewer
+package:com.android.vending
+package:com.google.omadm.trigger
+package:com.android.omadm.service.auto_generated_rro_product__
+package:com.google.euiccpixel.permissions
+package:com.google.android.ext.services
+package:com.google.android.configupdater
+package:com.android.sdm.plugins.dcmo
+package:com.google.android.apps.turbo
+package:com.google.android.compos.payload
+package:com.verizon.llkagent
+package:com.google.android.gms.supervision
+package:com.google.android.pixel.setupwizard.overlay2021
+package:com.android.providers.userdictionary
+package:com.android.cts.ctsshim
+package:com.google.android.apps.photos
+package:com.android.bluetooth
+package:com.android.cellbroadcastservice.overlay.pixel
+package:com.google.android.markup
+package:com.google.android.apps.scone
+package:com.google.android.apps.helprtc
+package:com.google.android.wfcactivation
+package:com.google.android.connectivitythermalpowermanager
+package:com.android.internal.display.cutout.emulation.corner
+package:com.google.android.gms
+package:com.customermobile.preload.vzw
+package:com.android.printspooler
+package:com.android.systemui.auto_generated_rro_product__
+package:com.google.android.apps.dreamliner
+package:com.google.android.storagemanager.auto_generated_rro_product__
+package:com.android.providers.partnerbookmarks
+package:com.android.soundpicker
+package:com.google.mainline.telemetry
+package:com.google.ambient.streaming
+package:com.google.android.euicc
+package:com.google.android.googlequicksearchbox.nga_resources
+package:com.google.android.carrier
+package:com.android.dynsystem
+package:com.android.angle
+package:com.google.android.bluetooth
+package:com.google.android.iwlan
+package:com.android.hbmsvmanager.auto_generated_rro_product__
+package:com.android.safetyregulatoryinfo.auto_generated_rro_product__
+package:com.android.providers.telephony.auto_generated_rro_product__
+package:com.android.nfc.auto_generated_rro_vendor__
+package:com.google.android.connectivity.resources
+package:com.android.bips.auto_generated_rro_product__
+package:com.google.android.youtube
+package:com.android.simappdialog.auto_generated_rro_product__
+package:com.android.externalstorage
+package:com.android.server.telecom
+
+2023-10-23 14:48:14,858:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "pm list packages" returned: 
+package:com.google.audio.hearing.visualization.accessibility.scribe
+package:com.android.systemui.auto_generated_rro_vendor__
+package:com.google.android.providers.media.module
+package:com.google.android.overlay.permissioncontroller
+package:com.google.android.overlay.googlewebview
+package:com.android.calllogbackup
+package:com.android.omadm.service
+package:io.appium.uiautomator2.server
+package:com.android.providers.contacts
+package:com.google.android.pixel.setupwizard.auto_generated_rro_product__
+package:com.google.android.apps.nbu.files
+package:com.android.dreams.basic
+package:com.android.companiondevicemanager
+package:com.android.cts.priv.ctsshim
+package:com.google.android.calendar
+package:com.google.android.contacts
+package:com.android.mms.service
+package:com.google.android.cellbroadcastreceiver
+package:com.android.providers.downloads
+package:com.android.bluetoothmidiservice
+package:com.google.android.apps.wallpaper.pixel
+package:com.android.networkstack.overlay
+package:com.google.android.euiccoverlay
+package:io.appium.settings
+package:com.google.android.printservice.recommendation
+package:com.google.android.captiveportallogin
+package:com.google.android.networkstack
+package:com.android.captiveportallogin.overlay
+package:com.google.android.overlay.googleconfig
+package:com.android.keychain
+package:com.google.android.hardwareinfo
+package:com.google.android.tag
+package:android.auto_generated_rro_vendor__
+package:com.google.android.dreamlinerupdater
+package:com.google.android.apps.wellbeing
+package:com.android.nfc.auto_generated_rro_product__
+package:com.android.shell
+package:com.google.android.ims
+package:com.google.android.adservices.api
+package:com.google.android.wifi.dialog
+package:com.android.inputdevices
+package:com.google.android.networkstack.tethering.overlay2021
+package:com.google.android.ondevicepersonalization.services
+package:com.google.euiccpixel
+package:com.google.android.apps.customization.pixel
+package:com.android.bookmarkprovider
+package:com.google.android.apps.tips
+package:com.google.android.onetimeinitializer
+package:com.google.android.permissioncontroller
+package:me.twocities.throttly
+package:com.android.sharedstoragebackup
+package:com.google.android.apps.cbrsnetworkmonitor
+package:com.android.imsserviceentitlement
+package:com.android.providers.media
+package:com.android.providers.calendar
+package:com.android.providers.blockednumber
+package:com.google.android.documentsui
+package:com.google.android.apps.internal.betterbug
+package:com.android.proxyhandler
+package:com.android.managedprovisioning
+package:com.android.emergency
+package:com.google.android.gms.location.history
+package:com.android.omadm.service.auto_generated_rro_vendor__
+package:com.google.android.storagemanager.auto_generated_rro_vendor__
+package:com.google.android.gm
+package:com.android.carrierdefaultapp
+package:com.android.backupconfirm
+package:com.google.android.flipendo
+package:com.google.android.hotspot2.osulogin
+package:com.android.nfc
+package:com.google.android.deskclock
+package:com.android.mtp
+package:com.google.android.gsf
+package:com.google.android.apps.accessibility.voiceaccess
+package:com.google.android.overlay.pixelconfigcommon
+package:com.google.android.carrierlocation
+package:com.google.euiccpixel.overlay.gs101
+package:com.google.android.apps.security.securityhub
+package:com.google.pixel.livewallpaper
+package:com.android.internal.display.cutout.emulation.double
+package:com.android.theme.font.notoserifsource
+package:com.google.android.wallpaper.effects
+package:com.android.traceur.auto_generated_rro_product__
+package:com.android.cellbroadcastreceiver.overlay.pixel
+package:com.google.SSRestartDetector
+package:com.example.batterymanager_utility
+package:com.google.android.settings.intelligence
+package:android.autoinstalls.config.google.nexus
+package:com.android.managedprovisioning.overlay
+package:com.android.systemui
+package:com.google.ar.core
+package:com.vzw.apnlib
+package:com.android.providers.contacts.auto_generated_rro_product__
+package:com.google.android.dialer
+package:com.google.android.flipendo.auto_generated_rro_vendor__
+package:com.samsung.slsi.telephony.oem.oemrilhookservice
+package:com.google.android.grilservice
+package:com.verizon.mips.services
+package:com.android.internal.systemui.navbar.gestural
+package:com.google.android.apps.nexuslauncher
+package:com.google.android.overlay.pixelconfig2021
+package:com.shannon.imsservice
+package:com.google.mainline.adservices
+package:com.google.android.calculator
+package:com.google.android.apps.healthdata
+package:com.android.internal.display.cutout.emulation.avoidAppsInCutout
+package:com.android.hotwordenrollment.okgoogle
+package:com.android.hbmsvmanager
+package:com.google.android.factoryota
+package:com.google.android.apps.wallpaper
+package:com.google.android.federatedcompute
+package:com.google.android.webview
+package:com.google.android.sdksandbox
+package:com.google.android.storagemanager
+package:com.android.wallpaperbackup
+package:com.google.android.cellbroadcastservice
+package:com.android.sdm.plugins.diagmon
+package:com.verizon.services
+package:com.android.internal.systemui.navbar.threebutton
+package:com.android.egg
+package:com.android.localtransport
+package:android
+package:com.google.android.overlay.pixelconfig2019
+package:com.google.android.overlay.pixelconfig2018
+package:com.google.android.virtualmachine.res
+package:com.google.android.pixelnfc
+package:com.quicinc.trepn
+package:com.android.providers.settings.auto_generated_rro_product__
+package:com.android.hotwordenrollment.xgoogle
+package:com.google.android.soundpicker
+package:com.android.settings.auto_generated_rro_vendor__
+package:com.android.internal.display.cutout.emulation.noCutout
+package:com.google.android.packageinstaller
+package:com.android.se
+package:com.android.pacprocessor
+package:com.android.settings.overlay.pixel2021
+package:com.android.providers.media.overlay.pixel
+package:com.google.android.tetheringentitlement
+package:com.google.android.safetycenter.resources
+package:com.google.android.apps.youtube.music
+package:com.android.stk
+package:com.android.internal.display.cutout.emulation.hole
+package:com.android.settings
+package:com.android.bips
+package:com.shannon.qualifiednetworksservice
+package:com.google.android.partnersetup
+package:com.android.internal.systemui.navbar.gestural_narrow_back
+package:com.android.internal.display.cutout.emulation.tall
+package:com.google.android.networkstack.tethering
+package:com.google.android.apps.gcs
+package:com.android.sdm.plugins.connmo
+package:com.google.android.projection.gearhead
+package:com.android.cameraextensions
+package:com.android.safetyregulatoryinfo
+package:com.google.android.odad
+package:com.android.internal.systemui.navbar.gestural_wide_back
+package:com.google.android.apps.carrier.carrierwifi
+package:com.android.traceur.auto_generated_rro_vendor__
+package:com.shannon.rcsservice
+package:com.google.android.videos
+package:com.google.android.ext.shared
+package:com.google.android.feedback
+package:com.google.android.apps.scone.overlays
+package:com.android.remoteprovisioner
+package:com.android.chrome
+package:com.google.android.apps.maps
+package:com.google.android.apps.camera.services
+package:com.google.android.wifi.resources.pixel
+package:com.google.android.as
+package:android.auto_generated_rro_product__
+package:com.android.musicfx
+package:com.android.server.telecom.auto_generated_rro_product__
+package:com.google.android.inputmethod.latin
+package:com.google.android.accessibility.soundamplifier
+package:com.google.android.apps.carrier.log
+package:com.google.android.overlay.udfpsoverlay
+package:com.google.android.marvin.talkback
+package:com.android.settings.overlay.gb7n6
+package:com.google.android.systemui.gxoverlay
+package:com.google.android.uwb.resources
+package:com.android.providers.downloads.ui
+package:com.google.android.wifi.resources
+package:com.android.ons
+package:com.google.android.GoogleCamera
+package:com.android.intentresolver
+package:com.google.android.apps.docs
+package:com.google.android.nearby.halfsheet
+package:com.android.phone.auto_generated_rro_vendor__
+package:com.android.certinstaller
+package:com.google.android.setupwizard
+package:com.google.android.apps.safetyhub
+package:com.google.android.apps.recorder
+package:com.google.android.apps.restore
+package:com.google.android.systemui.overlay.pixelbatteryhealthconfig
+package:com.android.simappdialog
+package:com.android.providers.telephony
+package:com.android.wallpaper.livepicker
+package:com.android.ons.auto_generated_rro_vendor__
+package:com.google.android.carriersetup
+package:com.google.android.uvexposurereporter
+package:io.appium.uiautomator2.server.test
+package:com.google.android.connectivity.resources.overlay
+package:com.android.internal.display.cutout.emulation.waterfall
+package:com.android.settings.auto_generated_rro_product__
+package:com.android.providers.settings
+package:com.google.android.pixel.setupwizard
+package:com.android.phone
+package:com.android.internal.systemui.navbar.gestural_extra_wide_back
+package:com.google.android.overlay.pixelconfig2019midyear
+package:com.google.android.flipendo.auto_generated_rro_product__
+package:com.google.android.apps.work.oobconfig
+package:com.android.traceur
+package:com.google.android.pixel.setupwizard.overlay2019
+package:com.google.android.as.oss
+package:com.google.android.apps.messaging
+package:com.google.android.apps.diagnosticstool
+package:com.google.android.apps.wearables.maestro.companion
+package:com.android.location.fused
+package:com.google.android.pixel.setupwizard.overlay
+package:com.android.vpndialogs
+package:com.samsung.slsi.telephony.oemril
+package:com.android.cellbroadcastreceiver
+package:com.android.systemui.plugin.globalactions.wallet
+package:com.google.android.tts
+package:com.google.android.googlequicksearchbox
+package:com.android.settings.overlay.oriole
+package:com.google.android.turboadapter
+package:com.google.android.modulemetadata
+package:com.google.RilConfigService
+package:com.android.phone.auto_generated_rro_product__
+package:com.google.android.documentsui.theme.pixel
+package:com.google.android.apps.work.clouddpc
+package:com.android.htmlviewer
+package:com.android.vending
+package:com.google.omadm.trigger
+package:com.android.omadm.service.auto_generated_rro_product__
+package:com.google.euiccpixel.permissions
+package:com.google.android.ext.services
+package:com.google.android.configupdater
+package:com.android.sdm.plugins.dcmo
+package:com.google.android.apps.turbo
+package:com.google.android.compos.payload
+package:com.verizon.llkagent
+package:com.google.android.gms.supervision
+package:com.google.android.pixel.setupwizard.overlay2021
+package:com.android.providers.userdictionary
+package:com.android.cts.ctsshim
+package:com.google.android.apps.photos
+package:com.android.bluetooth
+package:com.android.cellbroadcastservice.overlay.pixel
+package:com.google.android.markup
+package:com.google.android.apps.scone
+package:com.google.android.apps.helprtc
+package:com.google.android.wfcactivation
+package:com.google.android.connectivitythermalpowermanager
+package:com.android.internal.display.cutout.emulation.corner
+package:com.google.android.gms
+package:com.customermobile.preload.vzw
+package:com.android.printspooler
+package:com.android.systemui.auto_generated_rro_product__
+package:com.google.android.apps.dreamliner
+package:com.google.android.storagemanager.auto_generated_rro_product__
+package:com.android.providers.partnerbookmarks
+package:com.android.soundpicker
+package:com.google.mainline.telemetry
+package:com.google.ambient.streaming
+package:com.google.android.euicc
+package:com.google.android.googlequicksearchbox.nga_resources
+package:com.google.android.carrier
+package:com.android.dynsystem
+package:com.android.angle
+package:com.google.android.bluetooth
+package:com.google.android.iwlan
+package:com.android.hbmsvmanager.auto_generated_rro_product__
+package:com.android.safetyregulatoryinfo.auto_generated_rro_product__
+package:com.android.providers.telephony.auto_generated_rro_product__
+package:com.android.nfc.auto_generated_rro_vendor__
+package:com.google.android.connectivity.resources
+package:com.android.bips.auto_generated_rro_product__
+package:com.google.android.youtube
+package:com.android.simappdialog.auto_generated_rro_product__
+package:com.android.externalstorage
+package:com.android.server.telecom
+
+2023-10-23 14:48:14,952:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:48:15,035:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:15,036:INFO:WebExperiment:Device: Pixel6 (192.168.0.142:5555, Android 13, API level 33)
+2023-10-23 14:48:15,037:INFO:Profilers:Loading
+2023-10-23 14:48:15,121:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:48:15,204:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:15,205:DEBUG:PluginHandler:Batterymanager: Pixel6 (192.168.0.142:5555, Android 13, API level 33): Loading configuration
+2023-10-23 14:48:15,205:INFO:Device:Default unplug
+2023-10-23 14:48:15,288:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:15,411:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "dumpsys battery unplug" returned: 
+
+2023-10-23 14:48:15,471:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:48:15,538:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:15,540:DEBUG:Scripts:Running hook before_experiment on device Pixel6 (192.168.0.142:5555, Android 13, API level 33)
+args: ()
+kwargs: {}
+2023-10-23 14:48:15,565:INFO:Python3:before_experiment.py
+2023-10-23 14:48:15,568:DEBUG:Python3:before_experiment.py returned None
+2023-10-23 14:48:15,576:INFO:WebExperiment:URL: https://www.skype.com/
+2023-10-23 14:48:15,577:INFO:Profilers:Setting output
+2023-10-23 14:48:15,579:DEBUG:PluginHandler:Batterymanager: Setting output: /home/pi/android-runner/examples/batterymanager/output/2023.10.23_144810/data/Pixel6/https-www-skype-com/chrome/batterymanager
+2023-10-23 14:48:15,580:INFO:WebExperiment:Run 1/10 of subject "https://www.skype.com/" on Pixel6
+2023-10-23 14:48:15,739:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "logcat -c" returned: 
+
+2023-10-23 14:48:15,740:INFO:WebExperiment:Logcat cleared
+2023-10-23 14:48:15,823:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:48:15,912:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:15,914:DEBUG:Scripts:Running hook before_run on device Pixel6 (192.168.0.142:5555, Android 13, API level 33)
+args: ()
+kwargs: {'browser': <AndroidRunner.Browsers.Chrome.Chrome object at 0x7f7f77f2b0>}
+2023-10-23 14:48:15,935:INFO:Python3:before_run.py
+2023-10-23 14:48:16,088:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "am start -n "com.example.batterymanager_utility/com.example.batterymanager_utility.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER" returned: 
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.batterymanager_utility/.MainActivity }
+
+2023-10-23 14:48:17,249:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "pm clear com.android.chrome" returned: 
+Success
+
+2023-10-23 14:48:22,255:DEBUG:Python3:before_run.py returned None
+2023-10-23 14:48:22,410:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "logcat -c" returned: 
+
+2023-10-23 14:48:22,411:INFO:Chrome:192.168.0.142:5555: Start
+2023-10-23 14:48:22,791:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "am start -S -a android.intent.action.VIEW -n com.android.chrome/com.google.android.apps.chrome.IntentDispatcher --activity-clear-task" returned: 
+Stopping: com.android.chrome
+Starting: Intent { act=android.intent.action.VIEW flg=0x8000 cmp=com.android.chrome/com.google.android.apps.chrome.IntentDispatcher }
+Error type 3
+Error: Activity class {com.android.chrome/com.google.android.apps.chrome.IntentDispatcher} does not exist.
+
+2023-10-23 14:48:27,949:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "dumpsys activity recents | grep "Recent #0" | cut -d "=" -f2 | grep -o -p "[a-z|.]*"" returned: 
+grep: Unknown option 'p' (see "grep --help")
+
+2023-10-23 14:48:27,951:DEBUG:Device:Current activity: grep: Unknown option 'p' (see "grep --help")
+2023-10-23 14:48:28,049:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:48:28,136:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:28,137:DEBUG:Scripts:Running hook after_launch on device Pixel6 (192.168.0.142:5555, Android 13, API level 33)
+args: ('192.168.0.142:5555', 'grep: Unknown option \'p\' (see "grep --help")')
+kwargs: {'browser': <AndroidRunner.Browsers.Chrome.Chrome object at 0x7f7f77f2b0>}
+2023-10-23 14:48:28,160:INFO:Python3:after_launch.py
+2023-10-23 14:48:28,162:DEBUG:Python3:after_launch.py returned None
+2023-10-23 14:48:28,219:INFO:Profilers:Start profiling
+2023-10-23 14:48:42,062:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:48:42,150:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:42,152:DEBUG:PluginHandler:Batterymanager: Pixel6 (192.168.0.142:5555, Android 13, API level 33): Start profiling
+2023-10-23 14:48:42,277:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "am start-foreground-service -n "com.example.batterymanager_utility/com.example.batterymanager_utility.DataCollectionService" --ei sampleRate 100 --es "dataFields" "BATTERY_PROPERTY_CURRENT_NOW,EXTRA_VOLTAGE,EXTRA_TEMPERATURE" --ez toCSV false" returned: 
+Starting service: Intent { cmp=com.example.batterymanager_utility/.DataCollectionService (has extras) }
+
+2023-10-23 14:48:42,304:INFO:Chrome:192.168.0.142:5555: Load URL: https://www.skype.com/
+2023-10-23 14:48:42,448:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "am start -a android.intent.action.VIEW -n com.android.chrome/com.google.android.apps.chrome.IntentDispatcher -d https://www.skype.com/" returned: 
+Starting: Intent { act=android.intent.action.VIEW dat=https://www.skype.com/... cmp=com.android.chrome/com.google.android.apps.chrome.IntentDispatcher }
+
+2023-10-23 14:48:47,544:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:48:47,633:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.sdk" returned: 
+33
+
+2023-10-23 14:48:47,634:DEBUG:Scripts:Running hook interaction on device Pixel6 (192.168.0.142:5555, Android 13, API level 33)
+args: (<AndroidRunner.WebExperiment.WebExperiment object at 0x7f8bb08640>,)
+kwargs: {'browser': <AndroidRunner.Browsers.Chrome.Chrome object at 0x7f7f77f2b0>}
+2023-10-23 14:48:47,662:INFO:Python3:interaction3.py
+2023-10-23 14:48:47,780:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "logcat -d | grep "<expr>"" returned: 
+
+2023-10-23 14:48:48,314:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "input tap 595 1755" returned: 
+
+2023-10-23 14:48:48,896:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "logcat -d | grep "<expr>"" returned: 
+
+2023-10-23 14:48:49,344:DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:3000
+2023-10-23 14:50:07,595:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "dumpsys battery reset" returned: 
+
+2023-10-23 14:50:07,598:INFO:Profilers:Stop profiling
+2023-10-23 14:50:07,682:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "getprop ro.build.version.release" returned: 
+13
+
+2023-10-23 14:50:07,729:ERROR:root:Experiment stopped by user. To continue, add progress file argument to experiment startup: --progress /home/pi/android-runner/examples/batterymanager/output/2023.10.23_144810/progress.xml

@@ -1,0 +1,3 @@
+2023-10-22 17:47:35,483:INFO:ExperimentFactory:/home/pi/android-runner/examples/batterymanager/p.json
+2023-10-22 17:47:35,486:ERROR:root:FileFormatError: /home/pi/android-runner/examples/batterymanager/p.json
+2023-10-22 17:47:35,486:ERROR:root:An error occurred, the experiment has been stopped. To continue, add progress file argument to experiment startup: --progress  No progress file created

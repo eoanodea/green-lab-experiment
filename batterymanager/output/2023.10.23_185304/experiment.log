@@ -1,0 +1,10 @@
+2023-10-23 18:53:04,961:INFO:ExperimentFactory:/home/pi/android-runner/examples/batterymanager/p.json
+2023-10-23 18:53:05,087:DEBUG:AndroidRunner.Adb:Device list:
+{0: '18131FDF6002S9', 1: '192.168.0.142:5555'}
+2023-10-23 18:53:05,088:INFO:Device:Setting logcat buffer size to 57344K
+2023-10-23 18:53:05,113:DEBUG:AndroidRunner.Adb:192.168.0.142:5555: "logcat -G 57344K" returned: 
+error: device offline
+
+2023-10-23 18:53:05,115:ERROR:root:AdbError: error: device offline
+
+2023-10-23 18:53:05,115:ERROR:root:An error occurred, the experiment has been stopped. To continue, add progress file argument to experiment startup: --progress  No progress file created

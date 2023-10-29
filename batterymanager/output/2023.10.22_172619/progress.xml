@@ -1,0 +1,188 @@
+<experiment>
+  <configHash>4cc12fa646f9c34fc7bdb37b4bebe330</configHash>
+  <outputDir>/home/pi/android-runner/examples/batterymanager/output/2023.10.22_172619/</outputDir>
+  <runsToRun>
+    <run runId="20">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="21">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="22">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="23">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="24">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="25">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="26">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="27">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="28">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="29">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>10</runCount>
+    </run>
+  </runsToRun>
+  <runsDone>
+    <run runId="0">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="1">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="2">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="3">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="4">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="5">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="6">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="7">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="8">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="9">
+      <device>Pixel6</device>
+      <path>https://www.microsoft.com</path>
+      <browser>chrome</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="10">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="11">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="12">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="13">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="14">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="15">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="16">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="17">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="18">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="19">
+      <device>Pixel6</device>
+      <path>https://appsflyer.com/</path>
+      <browser>chrome</browser>
+      <runCount>10</runCount>
+    </run>
+  </runsDone>
+</experiment>

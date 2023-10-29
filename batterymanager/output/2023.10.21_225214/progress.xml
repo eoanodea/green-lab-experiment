@@ -1,0 +1,85 @@
+<experiment>
+  <configHash>c5f9bc375b0c09d13a2d777ae08b4499</configHash>
+  <outputDir>/home/pi/android-runner/examples/batterymanager/output/2023.10.21_225214/</outputDir>
+  <runsToRun/>
+  <runsDone>
+    <run runId="0">
+      <device>Pixel6</device>
+      <path>https://www.adobe.com</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="1">
+      <device>Pixel6</device>
+      <path>https://www.yahoo.com</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="2">
+      <device>Pixel6</device>
+      <path>https://www.nytimes.com</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="3">
+      <device>Pixel6</device>
+      <path>https://www.baidu.com</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="4">
+      <device>Pixel6</device>
+      <path>https://www.digicert.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="5">
+      <device>Pixel6</device>
+      <path>https://www.ui.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="6">
+      <device>Pixel6</device>
+      <path>https://www.skype.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="7">
+      <device>Pixel6</device>
+      <path>https://www.nic.ru/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="8">
+      <device>Pixel6</device>
+      <path>https://criteo.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="9">
+      <device>Pixel6</device>
+      <path>https://intuit.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="10">
+      <device>Pixel6</device>
+      <path>https://rubiconproject.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="11">
+      <device>Pixel6</device>
+      <path>https://epicgames.com/</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="12">
+      <device>Pixel6</device>
+      <path>https://ebay.com</path>
+      <browser>chrome</browser>
+      <runCount>1</runCount>
+    </run>
+  </runsDone>
+</experiment>
