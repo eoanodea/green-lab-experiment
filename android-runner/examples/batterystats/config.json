@@ -1,0 +1,21 @@
+{
+  "type": "native",
+  "devices": {
+    "OnePlus3": {}
+  },
+  "repetitions": 3,
+  "duration": 60000,
+  "monkeyrunner_path": "/home/user/Android/Sdk/tools/bin/monkeyrunner",
+  "systrace_path": "/usr/lib/android-sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "android-runner/examples/batterystats/Scripts/power_profile.xml",
+  "paths": [
+    "android-runner/example/batterystats/test.androidrunner.apk",
+    "android-runner/example/batterystats/test.blackscreen.apk"
+  ],
+  "profilers": {
+    "batterystats": {
+      "cleanup": true 
+    }
+  },
+  "time_between_run": 120000
+}

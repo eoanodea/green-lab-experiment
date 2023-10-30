@@ -1,0 +1,35 @@
+{
+  "type": "web",
+  "devices": {
+    "Pixel6": {}
+  },
+  "repetitions": 1,
+  "duration": 60000,
+  "browsers": ["chrome"],
+  "monkeyrunner_path": "/usr/bin/monkeyrunner",
+  "systrace_path": "/usr/lib/android-sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "android-runner/examples/batterystats/Scripts/power_profile_P6.xml",
+  "paths": [
+    "https://www.google.com"
+  ],
+  "profilers": {
+    "trepn": {
+      "preferences": {
+        "profiling_interval": 100,
+        "battery_power_source_selection": "Direct Power"
+      },
+      "data_points": ["battery_power", "mem_usage"]
+    }
+  },
+  "scripts": {
+    "interaction": [
+      {
+        "type": "python3",
+        "path": "Scripts/interaction.py",
+        "timeout": 500,
+        "logcat_regex": "some keyword"
+      }
+    ]
+  },
+  "time_between_run": 1200
+}

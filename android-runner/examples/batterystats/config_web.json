@@ -1,0 +1,32 @@
+{
+  "type": "web",
+  "devices": {
+    "Pixel6": {}
+  },
+  "repetitions": 1,
+  "duration": 600,
+  "browsers": ["chrome"],
+  "monkeyrunner_path": "/usr/bin/monkeyrunner",
+  "systrace_path": "/usr/lib/android-sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "android-runner/examples/batterystats/Scripts/power_profile_P6.xml", 
+  "paths": [
+    "https://www.google.com"
+  ],
+  "profilers": {
+    "batterystats": {
+      "cleanup": true,
+      "python2_path": "/home/pi/.pyenv/versions/systrace/bin/python2.7"
+    }
+  },
+  "scripts": {
+    "interaction": [
+      {
+        "type": "python3",
+        "path": "Scripts/interaction.py",
+        "timeout": 500,
+        "logcat_regex": "some keyword"
+      }
+    ]
+  },
+  "time_between_run": 1200
+}
