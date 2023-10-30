@@ -6,7 +6,7 @@
 - [Eoan O'Dea](https://github.com/eoanodea)
 - Dario Di Mambro
 - Saman Khodadadi
-- Hugo van Wezenbeek
+- [Hugo van Wezenbeek](https://github.com/hfvw)
 
 ## ✏️ Description
 
