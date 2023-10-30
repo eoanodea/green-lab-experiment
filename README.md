@@ -20,7 +20,7 @@ The code for this project is broken into 5 parts:
 
 ### 📱 Hardware
 
-- [Raspberry Pi 4 Model B with 4GB of RAM](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
+- [Raspberry Pi 3 Model B+ with 4GB of RAM](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
 - [Google Pixel 6](https://store.google.com/nl/product/pixel_6a?hl=nl)
 
 ### 🖥️ Software
