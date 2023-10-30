@@ -1,0 +1,155 @@
+---
+title: "Untitled"
+author: "CWV"
+date: "2023-10-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+library(gridExtra)
+library(readxl)
+library(corrplot)
+library(scales)
+library(hrbrthemes)
+library(reshape2)
+library(ggpubr)
+library(lemon)
+```
+
+## R Markdown
+
+
+```{r cars}
+CWV_measurements <- read_excel("./BANDWIDTH_5Mbps/CWV_2.xlsx",)
+
+folder_path <- "./BANDWIDTH_5Mbps/output3/"
+
+CWV_measurements = as_tibble(CWV_measurements)
+CWV_measurements <- CWV_measurements %>%separate(`Date,"Name","Value","Host"`,c("Date", "name","Value","Host"), sep = ",")
+
+
+CWV_measurements <- CWV_measurements %>%
+  mutate_all(~str_replace_all(., '"', ''))
+CWV_measurements$Value <- as.numeric(CWV_measurements$Value) 
+
+CWV_measurements$group =rep (1:nrow(CWV_measurements), each = 3, length.out = nrow(CWV_measurements))
+CWV_measurements_wide = CWV_measurements %>% select(!Date) %>% pivot_wider(names_from = name, values_from = Value)
+
+
+
+csv_files <- list.files(folder_path, pattern = "\\.csv$", full.names = TRUE)
+
+# Initialize an empty list to store dataframes
+dfs <- list()
+
+# Loop through each CSV file and read data, adding filename as a new column
+for (file in csv_files) {
+  # Read CSV file
+  single_energy_experiment <- read.csv(file)
+  
+  # Extract file name without extension
+  file_name <- tools::file_path_sans_ext(basename(file))
+  
+  
+  # Append the dataframe to the list
+  dfs <- append(dfs, list(single_energy_experiment))
+}
+
+# Combine all dataframes into a single dataframe
+merged_energy_experiments <- bind_rows(dfs)
+rm(dfs)
+
+complete_dataset = cbind(CWV_measurements_wide,merged_energy_experiments)
+
+
+
+complete_dataset <- complete_dataset %>% select(!group)
+complete_dataset
+
+```
+```{r}
+average_dataset <- as.data.frame(1:500)
+complete_dataset$group <- rep(1:50, each = 10)
+
+average_dataset$FID <- ave (as.data.frame(complete_dataset$FID), as.data.frame(complete_dataset$group), FUN=colMeans)
+average_dataset <- average_dataset[,-1]
+
+# Calculate the average values across the 10 runs for each column
+average_dataset$LCP <- ave (data.frame(complete_dataset$LCP), data.frame(complete_dataset$group), FUN=colMeans)
+average_dataset$CLS <- ave (data.frame(complete_dataset$CLS), data.frame(complete_dataset$group), FUN=colMeans)
+average_dataset$W <- ave (data.frame(complete_dataset$Avg.power..W.), data.frame(complete_dataset$group), FUN=colMeans)
+average_dataset$J <- ave (data.frame(complete_dataset$Energy.trapz..J.), data.frame(complete_dataset$group), FUN=colMeans)
+average_dataset$T <- ave (data.frame(complete_dataset$EXTRA_TEMPERATURE), data.frame(complete_dataset$group), FUN=colMeans) / 10
+
+colnames(average_dataset) <- c("FID", "LCP", "CLS", "W", "J", "T")
+
+average_dataset <- average_dataset[seq(1, nrow(average_dataset), 10), ]
+rownames(average_dataset) <- seq(length = nrow(average_dataset))
+average_dataset <- average_dataset %>% mutate_all(unlist)
+average_dataset
+```
+
+## Including Plots
+```{r}
+theme_set(theme_ipsum())
+```
+
+```{r}
+CWV_measurements %>% ggplot(aes(x=name, y=Value)) +
+        geom_violin(width = 1.3) +
+        geom_boxplot(width = 0.05, alpha = 0.1, color = '#c0c0c0') +
+        scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x), labels = trans_format("log10", math_format(10^.x))) +
+        labs(x = "CWV", y = "Performance Score")
+```
+
+
+
+
+```{r}
+corrplot_dataset = complete_dataset %>% select(!run) %>% select(!Host)
+corrplot_dataset
+
+corrplot_dataset <- corrplot_dataset %>% 
+        rename("AVG.P" = "Avg.power..W.",
+               "ESJ" = "Energy.simple..J.",
+                "BPCW" = "BATTERY_PROPERTY_CURRENT_NOW",
+                "ETJ" = "Energy.trapz..J.",
+                "EV" = "EXTRA_VOLTAGE",
+                "ET" = "EXTRA_TEMPERATURE")
+
+corrplot(cor(corrplot_dataset), order = 'FPC', type = 'lower')
+```
+
+```{r}
+
+average_dataset_long <- pivot_longer(average_dataset, cols = c(FID, LCP, CLS), names_to = "variable", values_to = "value")
+
+p1 <- ggplot(average_dataset_long, aes(x = J, y = value, color = variable)) +
+        geom_point() +
+        geom_smooth(method = loess, method.args = list(family = "symmetric")) +
+        labs(x = "Energy Consumption (J)", y = "Performance Score", color = "CWV Metric") +
+        facet_grid(rows = vars(variable), scales = "free")
+
+p2 <- ggplot(average_dataset_long, aes(x = J, y = value, color = variable)) +
+        geom_point() +
+        geom_smooth(method = loess, method.args = list(family = "symmetric")) +
+        labs(x = "Energy Consumption (J)", y = "Performance Score", color = "CWV Metric") +
+        scale_y_continuous(trans='log10')
+
+p3 <- ggplot(average_dataset_long, aes(x = T, y = value, color = variable)) +
+        geom_point() +
+        labs(x = "Temperature (C)", y = "Performance Score", color = "CWV Metric") +
+        facet_grid(cols = vars(variable), scales = "free_y") +
+        facet_rep_wrap(~ variable, nrow = 1, scales = "free_y", repeat.tick.labels = TRUE)
+
+p1
+p2
+p3
+
+#p4 <- ggarrange(p1, p2, labels = c("A", "B"), common.legend = TRUE, legend = "bottom")
+#p4
+
+```

@@ -38,3 +38,8 @@ This experiment was designed to run on a Raspberry Pi 4 Model B with 4GB of RAM.
    2. `node receiver/app.js`
    3. `ngrok http 3000`
 7. The `ngrok` window will give you a https url. Copy this URL into the `.env` file.
+8. Run <br> `cp -r batterymanager android-runner/examples/batterymanager`
+9. Finally you can run the experiment using the following command: <br>
+   `sudo python3 android-runner android-runner/examples/batterymanager/config_web.json`
+
+All outputs will be stored in the `android-runner/examples/batterymanager/output` directory.
